@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>48</title>
+</head>
+<body>
+    <!--Tres botones-->
+     <!--Inicio B1-->
+    <label for="b1">Dar clic aquí</label>
+    <button onclick="random()" name="b1" id="botonUno">Número Random</button>
+
+    <p id="textoUno"> Número random </p>
+    
+    <script>
+        
+        function random(){
+        var textoDos = document.getElementById("textoUno");
+        textoDos.textContent= +Math.floor(Math.random() * 11);
+        }
+        
+
+    </script>
+      <!--Fin B1-->
+      <!--Inicio B2-->
+      <br>
+      <label for="b2">Dar clic aquí</label>
+      <button onclick="aleatorio(10,50)" name="b2" id="botonUno">Número Random</button>
+      <p id="textoDos"> Número random </p>
+      <br>
+    <script>
+        function aleatorio(minimo, maximo){
+            
+            var maximo = maximo + 1 ;
+            let aleatorio = ((maximo-minimo)+minimo);
+            var randomDos = +Math.floor(Math.random(aleatorio)* (maximo-minimo)+minimo);
+            var botonDos = document.getElementById("textoDos");
+            botonDos.textContent= randomDos;
+        }
+        </script>
+    <!--Inicio B3-->
+    <br>
+    <label for="b3">Dar clic aquí</label>
+    <button onclick="aleatorioTres(10,150)" name="b3" id="botonUno">Número Random</button>
+    <p id="textoTres"> Número random </p>
+    <br>
+  <script>
+      function aleatorioTres(minimo, maximo){
+          
+          var maximo = maximo + 1 ;
+          let aleatorio = ((maximo-minimo)+minimo);
+          var randomTres = +Math.floor(Math.random(aleatorio)* (maximo-minimo)+minimo);
+          var botonTres = document.getElementById("textoTres");
+          botonTres.textContent= randomTres;
+      }
+      </script>
+    
+
+
+    <!--Fin B3-->
+
+</body>
+</html>
